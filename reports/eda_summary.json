@@ -1,0 +1,106 @@
+{
+  "total_catalog_size": 76327,
+  "total_categories": 9,
+  "price_stats_inr": {
+    "mean": 8988.88,
+    "median": 3237.0,
+    "min": 83,
+    "max": 1392325,
+    "std": 28117.24
+  },
+  "review_stats": {
+    "mean_reviews": 1038.12,
+    "median_reviews": 53.0,
+    "max_reviews": 406442,
+    "products_with_reviews_pct": 98.45
+  },
+  "title_stats": {
+    "mean_words": 11.48,
+    "median_words": 9.0,
+    "min_words": 1,
+    "max_words": 229,
+    "mean_characters": 72.66
+  },
+  "category_price_breakdown": {
+    "Audio & Video": {
+      "count": 2712,
+      "mean": 5263.64,
+      "median": 2158.0,
+      "min": 166,
+      "max": 331917,
+      "std": 15678.12
+    },
+    "Automotive & Car Accessories": {
+      "count": 9480,
+      "mean": 5460.44,
+      "median": 2988.0,
+      "min": 83,
+      "max": 236716,
+      "std": 8784.87
+    },
+    "Cameras & Photography": {
+      "count": 8372,
+      "mean": 19296.47,
+      "median": 5727.0,
+      "min": 83,
+      "max": 1392325,
+      "std": 56050.32
+    },
+    "Laptops & Computers": {
+      "count": 2178,
+      "mean": 94797.74,
+      "median": 81257.0,
+      "min": 913,
+      "max": 854817,
+      "std": 71154.65
+    },
+    "Men's Fashion": {
+      "count": 16619,
+      "mean": 4231.04,
+      "median": 3237.0,
+      "min": 249,
+      "max": 107900,
+      "std": 3931.73
+    },
+    "Men's Footwear": {
+      "count": 16117,
+      "mean": 7803.91,
+      "median": 6142.0,
+      "min": 332,
+      "max": 668648,
+      "std": 9457.14
+    },
+    "Mobiles & Tablets": {
+      "count": 6086,
+      "mean": 4138.22,
+      "median": 1577.0,
+      "min": 83,
+      "max": 809665,
+      "std": 15657.31
+    },
+    "Movies & Entertainment": {
+      "count": 5422,
+      "mean": 1198.39,
+      "median": 747.0,
+      "min": 83,
+      "max": 11786,
+      "std": 1235.2
+    },
+    "Toys & Games": {
+      "count": 9341,
+      "mean": 2597.23,
+      "median": 1826.0,
+      "min": 166,
+      "max": 58266,
+      "std": 3103.71
+    }
+  },
+  "figures_generated": [
+    "01_products_by_category.png",
+    "02_price_distribution_by_category.png",
+    "03_review_counts_distribution.png",
+    "04_title_word_count_distribution.png",
+    "05_top_brands_frequency.png",
+    "06_data_cleaning_funnel.png"
+  ]
+}
