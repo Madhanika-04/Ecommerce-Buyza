@@ -1,0 +1,35 @@
+{
+  "num_products": 76327,
+  "num_features": 25000,
+  "vocabulary_size": 25000,
+  "nnz_elements": 1464803,
+  "sparsity_pct": 99.9232,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "min_df": 2,
+  "sublinear_tf": true,
+  "sample_vocabulary": [
+    "00",
+    "000",
+    "000 lb",
+    "000 lbs",
+    "000 pounds",
+    "0001",
+    "000lb",
+    "000lb max",
+    "000lbs",
+    "001",
+    "001 black",
+    "001 pitch",
+    "002",
+    "002 black",
+    "003",
+    "006",
+    "007",
+    "007m",
+    "007m glass",
+    "01"
+  ]
+}
