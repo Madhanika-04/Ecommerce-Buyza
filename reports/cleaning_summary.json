@@ -1,0 +1,94 @@
+{
+  "raw_total_records": 100678,
+  "post_clean_before_dedup": 98483,
+  "duplicates_removed": 22156,
+  "final_cleaned_records": 76327,
+  "currency": "INR (\u20b9)",
+  "usd_to_inr_exchange_rate": 83.0,
+  "categories_count": 9,
+  "categories": {
+    "Men's Fashion": 16619,
+    "Men's Footwear": 16117,
+    "Automotive & Car Accessories": 9480,
+    "Toys & Games": 9341,
+    "Cameras & Photography": 8372,
+    "Mobiles & Tablets": 6086,
+    "Movies & Entertainment": 5422,
+    "Audio & Video": 2712,
+    "Laptops & Computers": 2178
+  },
+  "file_breakdown": [
+    {
+      "filename": "amazon_audio_video.csv",
+      "category": "Audio & Video",
+      "raw_rows": 2760,
+      "title_dropped": 14,
+      "missing_price_dropped": 24,
+      "clean_rows": 2722
+    },
+    {
+      "filename": "amazon_camra.csv",
+      "category": "Cameras & Photography",
+      "raw_rows": 11965,
+      "title_dropped": 2,
+      "missing_price_dropped": 217,
+      "clean_rows": 11746
+    },
+    {
+      "filename": "amazon_car_accessories.csv",
+      "category": "Automotive & Car Accessories",
+      "raw_rows": 9571,
+      "title_dropped": 0,
+      "missing_price_dropped": 2,
+      "clean_rows": 9569
+    },
+    {
+      "filename": "amazon_laptop.csv",
+      "category": "Laptops & Computers",
+      "raw_rows": 2306,
+      "title_dropped": 0,
+      "missing_price_dropped": 0,
+      "clean_rows": 2306
+    },
+    {
+      "filename": "amazon_men.csv",
+      "category": "Men's Fashion",
+      "raw_rows": 23953,
+      "title_dropped": 0,
+      "missing_price_dropped": 1007,
+      "clean_rows": 22946
+    },
+    {
+      "filename": "amazon_men_shoe.csv",
+      "category": "Men's Footwear",
+      "raw_rows": 23744,
+      "title_dropped": 0,
+      "missing_price_dropped": 516,
+      "clean_rows": 23228
+    },
+    {
+      "filename": "amazon_mobile.csv",
+      "category": "Mobiles & Tablets",
+      "raw_rows": 6974,
+      "title_dropped": 2,
+      "missing_price_dropped": 58,
+      "clean_rows": 6914
+    },
+    {
+      "filename": "amazon_movies.csv",
+      "category": "Movies & Entertainment",
+      "raw_rows": 8002,
+      "title_dropped": 148,
+      "missing_price_dropped": 205,
+      "clean_rows": 7649
+    },
+    {
+      "filename": "amazon_toys_1.csv",
+      "category": "Toys & Games",
+      "raw_rows": 11403,
+      "title_dropped": 0,
+      "missing_price_dropped": 0,
+      "clean_rows": 11403
+    }
+  ]
+}
