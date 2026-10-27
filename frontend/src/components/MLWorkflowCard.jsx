@@ -41,7 +41,7 @@ export default function MLWorkflowCard() {
           <div className="text-[10px] font-bold text-amber-400 uppercase tracking-wider mb-1">Step 3 • Proximity</div>
           <h4 className="text-sm font-semibold text-white mb-1">Cosine Similarity</h4>
           <p className="text-[11px] text-slate-300">
-            Computes sparse dot products ($A \cdot q^T$) in &lt; 5ms, strictly excluding the viewed item itself.
+            Computes sparse dot products (A · q) in under 5ms, strictly excluding the viewed item itself.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function MLWorkflowCard() {
           <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider mb-1">Step 4 • Output</div>
           <h4 className="text-sm font-semibold text-white mb-1">Top-N Recommendations</h4>
           <p className="text-[11px] text-slate-300">
-            Returns the top most similar products ranked by similarity score ($0.0 \le \text{score} \le 1.0$).
+            Returns the top most similar products ranked by similarity score (0.0 to 1.0).
           </p>
         </div>
       </div>
