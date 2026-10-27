@@ -159,11 +159,11 @@ pytest
 
 ### 4. Start FastAPI REST Backend
 ```powershell
-python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
+python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8080 --reload
 ```
-- API Root: `http://127.0.0.1:8000`
-- Swagger UI Documentation: `http://127.0.0.1:8000/docs`
-- Health Endpoint: `http://127.0.0.1:8000/api/health`
+- API Root: `http://127.0.0.1:8080`
+- Swagger UI Documentation: `http://127.0.0.1:8080/docs`
+- Health Endpoint: `http://127.0.0.1:8080/api/health`
 
 ### 5. Start React Frontend
 ```powershell

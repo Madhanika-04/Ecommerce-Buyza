@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "E-Commerce Recommendation System"
     ENVIRONMENT: str = "development"
     DEBUG: bool = True
-    PORT: int = 8000
+    PORT: int = 8080
     HOST: str = "127.0.0.1"
     
     # CORS
