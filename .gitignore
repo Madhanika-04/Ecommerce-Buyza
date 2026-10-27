@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.env.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Large Dataset Files (Raw and heavy caches)
+# Keep data folder structure tracked with .gitkeep or README, ignore heavy raw CSVs
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+
+# Machine Learning Artifacts & Models
+artifacts/*.joblib
+artifacts/*.pkl
+artifacts/*.npz
+artifacts/*.sparse
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
