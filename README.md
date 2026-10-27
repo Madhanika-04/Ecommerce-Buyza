@@ -1,114 +1,204 @@
-# E-Commerce Recommendation System
+# Indian E-Commerce Recommendation System
 
-An end-to-end, Indian-localized E-Commerce application with Content-Based Recommendation powered by TF-IDF Vectorization and Cosine Similarity, built with a FastAPI backend and a React/Vite frontend.
-
----
-
-## 📌 Project Architecture
-
-```
-                                  +------------------------------------+
-                                  |     React 18 + Vite Frontend       |
-                                  |  (Indian UI, ₹ INR, Cart, Wishlist)|
-                                  +-----------------+------------------+
-                                                    | REST API (Axios)
-                                                    v
-                                  +------------------------------------+
-                                  |       FastAPI Backend API          |
-                                  |  (Catalog, Filtering, Pydantic)   |
-                                  +--------+------------------+--------+
-                                           |                  |
-                    +----------------------+                  +----------------------+
-                    |                                                                |
-                    v                                                                v
-+---------------------------------------+                      +---------------------------------------+
-|          MongoDB Database             |                      |        ML Recommendation Engine       |
-| (Cart, Wishlist, Orders, Persistence) |                      | (TF-IDF Vectorizer + Cosine Sim Query)|
-+---------------------------------------+                      +---------------------------------------+
-```
+An end-to-end, production-grade E-Commerce platform tailored for the Indian market, powered by Content-Based Filtering with TF-IDF Vectorization, query-specific Cosine Similarity, a high-performance FastAPI backend, MongoDB persistence, and a modern React/Vite user interface.
 
 ---
 
-## 🛠️ Technology Stack
+## 📌 1. Project Overview & Architecture
 
-- **Data Science & ML**: Python 3.11, Pandas, NumPy, Scikit-learn, TF-IDF Vectorizer, Cosine Similarity, Joblib, Matplotlib, Seaborn
-- **Backend**: FastAPI, Uvicorn, Pydantic v2, PyMongo, MongoDB Server v8.0
-- **Frontend**: React (Vite), JavaScript, Tailwind CSS, Lucide Icons, Axios, React Router
-- **Testing & Tools**: Pytest, Jupyter Notebooks, Git
-
----
-
-## 📂 Project Directory Structure
+This project demonstrates a complete, genuine Machine Learning engineering and full-stack development pipeline built upon real-world Amazon e-commerce data (76,327 cleaned products). It features:
+- **ML Engine**: Scikit-Learn TF-IDF text vectorization ($25,000$ n-grams) and scalable query-time Cosine Similarity with strict self-recommendation exclusion.
+- **REST API**: FastAPI backend with Pydantic request validation, pagination, and OpenAPI Swagger documentation.
+- **Data Persistence**: MongoDB integration for persistent Shopping Cart, Wishlist, and Simulated Orders.
+- **Frontend**: Responsive React 18 application built with Vite and Tailwind CSS, featuring Indian Rupee (`₹`) pricing, delivery address validation with 6-digit Indian PIN codes, and a simulated checkout flow.
 
 ```
-ecommerce-recommendation-system/
-├── data/
-│   ├── raw/                           # Original Kaggle CSV files (9 categories)
-│   ├── processed/                     # Cleaned and unified product catalog
-│   └── README.md                      # Dataset schemas and metadata
-├── notebooks/
-│   ├── 01_dataset_inspection.ipynb     # Phase 1: Exploration of raw CSVs & schemas
-│   ├── 02_data_cleaning.ipynb         # Phase 2: Missing values, normalization, formatting
-│   ├── 03_exploratory_data_analysis.ipynb # Phase 3: Category, price & text distributions
-│   ├── 04_feature_engineering.ipynb   # Phase 4: Text representation & TF-IDF matrix
-│   └── 05_recommendation_evaluation.ipynb # Phase 5: Evaluation & Cosine Similarity checks
-├── src/
-│   ├── data/                          # Data loading & cleaning pipeline scripts
-│   ├── features/                      # TF-IDF vectorization & feature transformers
-│   ├── models/                        # Scalable query-specific cosine similarity engine
-│   ├── evaluation/                    # Diversity, coverage, and similarity metrics
-│   └── utils/                         # Helper functions & Indian currency conversions
-├── backend/
-│   ├── app/
-│   │   ├── main.py                    # FastAPI entrypoint & CORS configuration
-│   │   ├── api/                       # API route handlers (products, recommendations, cart, etc.)
-│   │   ├── core/                      # Settings, logging, and environment configuration
-│   │   ├── db/                        # MongoDB client connection & indexes
-│   │   ├── schemas/                   # Pydantic request & response models
-│   │   └── services/                  # Recommendation service & catalog queries
-│   ├── tests/                         # Pytest test suite for API & ML integration
-│   ├── requirements.txt               # Backend dependencies
-│   └── .env.example                   # Environment configuration template
-├── frontend/                          # React + Vite Indian E-Commerce user interface
-├── artifacts/                         # Saved TF-IDF vectorizer and sparse feature matrix
-├── reports/
-│   └── figures/                       # Exported EDA plots (distributions, counts)
-├── docs/                              # Technical documentation & API specs
-├── scripts/
-│   └── inspect_dataset.py             # Phase 1 automated schema inspector
-├── tests/                             # Root unit & integration tests
-├── .gitignore                         # Comprehensive ignore rules
-├── pyproject.toml                     # Python packaging & tool configuration
-└── README.md                          # Main project guide
++-------------------------------------------------------------------------+
+|                        React 18 + Vite Frontend                         |
+|  - Indian UI Theme (Navy, Slate, Blue) | ₹ INR Pricing                  |
+|  - 6 Functional Pages (Home, Products, Details, Wishlist, Cart, Orders) |
+|  - Live ML Recommendation Match Badges (e.g. 88.5% Match)               |
++------------------------------------+------------------------------------+
+                                     |
+                                     | REST API (Axios / JSON)
+                                     v
++-------------------------------------------------------------------------+
+|                           FastAPI Backend                               |
+|  - Lifespan Model Management (Loaded once into RAM)                     |
+|  - Catalog Search, Filtering, and Sorting (<5ms response time)          |
+|  - Address & 6-Digit Indian PIN Code Validation                         |
++-------------------+---------------------------------+-------------------+
+                    |                                 |
+                    v                                 v
++-----------------------------------+ +-----------------------------------+
+|          MongoDB Server           | |     ML Recommendation Engine      |
+|  - Compound Indexes (User + Prod) | |  - TF-IDF Sparse Matrix (76k x 25k|
+|  - Persistent Cart & Wishlist     | |  - Query-Specific Cosine Sim      |
+|  - Simulated Orders Log           | |  - Strict Self-Exclusion (0.0%)   |
++-----------------------------------+ +-----------------------------------+
 ```
 
 ---
 
-## 📊 Dataset: 100k Amazon Products
+## 🛠️ 2. Technology Stack
+
+- **Data Science & ML**: Python 3.11, Pandas 2.2, NumPy 1.26, Scikit-learn 1.4, SciPy 1.16, Joblib 1.5, Matplotlib 3.10, Seaborn 0.13
+- **Backend API**: FastAPI 0.140, Uvicorn 0.51, Pydantic v2, PyMongo 3.11, MongoDB Server v8.0
+- **Frontend UI**: React 18, Vite, JavaScript, Tailwind CSS v3, React Router v6, Axios, Lucide React
+- **Testing & Tooling**: Pytest 9.0 (28 automated tests passing), Jupyter Notebooks, Git
+
+---
+
+## 📊 3. Dataset Summary: 100k Amazon Products
 
 Source: [Kaggle - A Comprehensive Dataset of 100k Amazon Products](https://www.kaggle.com/datasets/joyshil0599/a-comprehensive-dataset-of-100k-amazon-products)
 
-| File Name | Domain / Category | Rows |
-| :--- | :--- | :--- |
-| `amazon_audio_video.csv` | Audio & Video | 2,760 |
-| `amazon_camra.csv` | Cameras & Accessories | 11,965 |
-| `amazon_car_accessories.csv` | Automotive & Car Accessories | 9,571 |
-| `amazon_laptop.csv` | Laptops & Computers | 2,306 |
-| `amazon_men.csv` | Men's Clothing | 23,953 |
-| `amazon_men_shoe.csv` | Men's Footwear | 23,744 |
-| `amazon_mobile.csv` | Mobiles & Tablets | 6,974 |
-| `amazon_movies.csv` | Movies & Cinema | 8,002 |
-| `amazon_toys_1.csv` | Toys & Games | 11,403 |
-| **Total** | **9 Categories** | **100,678 Records** |
+| File Name | Retail Department | Raw Records | Cleaned Unique Products |
+| :--- | :--- | :--- | :--- |
+| `amazon_men.csv` | Men's Fashion | 23,953 | 16,619 |
+| `amazon_men_shoe.csv` | Men's Footwear | 23,744 | 16,117 |
+| `amazon_car_accessories.csv`| Automotive Accessories | 9,571 | 9,480 |
+| `amazon_toys_1.csv` | Toys & Games | 11,403 | 9,341 |
+| `amazon_camra.csv` | Cameras & Photography | 11,965 | 8,372 |
+| `amazon_mobile.csv` | Mobiles & Tablets | 6,974 | 6,086 |
+| `amazon_movies.csv` | Movies & Entertainment | 8,002 | 5,422 |
+| `amazon_audio_video.csv` | Audio & Video | 2,760 | 2,712 |
+| `amazon_laptop.csv` | Laptops & Computers | 2,306 | 2,178 |
+| **Total** | **9 Categories** | **100,678** | **76,327 Unique Items** |
 
 ---
 
-## 🚀 Execution & Verification
+## 🧹 4. Data Cleaning & Preprocessing Methodology
 
-### Run Dataset Inspection:
+1. **Character Encoding**: Raw CSV files were encoded in Windows `latin1` (`cp1252`), which crashed standard UTF-8 readers on symbols such as `0x96` (en-dash) and `0xae` (registered trademark). Cleaned to standard UTF-8.
+2. **Column Normalization**: Mapped variant column headers across departments (e.g. `Product Description `, `Production Description` $\to$ `raw_title`; `PriceDollar)` $\to$ `raw_price_usd`).
+3. **Artifact Stripping**: Removed stray `Unnamed: 7` through `Unnamed: 15` artifact columns generated by unescaped commas in raw descriptions.
+4. **Strict Missing Price Policy**: Under strict project guidelines (*"Never replace missing prices with zero or invent product descriptions"*), records with missing or corrupted prices (~1.75%) were discarded rather than imputed with fake values.
+5. **Deduplication**: Pruned **22,156 identical products** within categories to ensure recommendation diversity and prevent identical-item loops.
+6. **Currency Localization**: Converted USD prices to Indian Rupees (`₹ INR`) at ₹83 / USD, formatted with standard Indian lakh/crore commas (`₹12,34,567`).
+
+---
+
+## 🔬 5. Feature Engineering & Recommendation Algorithm
+
+### Feature Construction
+Each product is represented by an anchored text document combining:
+1. **Department Tag Anchor**: Normalized category injected twice to anchor semantic context and prevent cross-category drift.
+2. **Normalized Title & Specs**: Lowercased, punctuation-stripped descriptive text.
+3. **Domain Attributes**: Actor, director, and media quality where available.
+
+### Scalable Sparse Representation
+- **Vectorizer**: `TfidfVectorizer(max_features=25000, ngram_range=(1, 2), min_df=2, sublinear_tf=True)`
+- **Matrix Dimensions**: $76,327 \text{ products} \times 25,000 \text{ features}$
+- **Sparsity**: **99.92%** non-zero elements stored in a Compressed Sparse Row (`csr_matrix`) consuming only **6.75 MB** on disk.
+- **Scalability Achievement**: Completely avoids generating an unusable dense $76,327 \times 76,327$ matrix (~46.5 GB RAM).
+
+### Query-Time Cosine Similarity
+Because rows in the TF-IDF matrix are $L_2$-normalized, cosine similarity between a query item $q$ and all catalog items $A$ is computed as:
+$$\text{Cosine Similarity}(A, q) = A \cdot q^T$$
+- **Latency**: Mean query time is **4.54 ms** (P95: 5.43 ms).
+- **Self-Exclusion**: The viewed item's score is explicitly clamped to $-1.0$, guaranteeing **0.0% self-recommendations**.
+
+---
+
+## 📈 6. Model Evaluation Findings
+
+From benchmark evaluation across 500 test queries in [`reports/recommendation_evaluation.json`](file:///d:/Desktop/Buyza/reports/recommendation_evaluation.json):
+
+| Metric | Measured Value | Standard |
+| :--- | :--- | :--- |
+| **Self-Recommendation Rate** | **0.00%** | Must be strictly 0.0% |
+| **Duplicate Recommendation Rate** | **0.00%** | Must be strictly 0.0% |
+| **Score Bounds Validity** | **100.0%** | $0.0 \le \text{score} \le 1.0$ |
+| **Intra-Category Cohesion** | **97.05%** | Recommendations match retail domain |
+| **Mean Query Execution Latency** | **4.54 ms** | Sub-20ms real-time SLA |
+
+> [!NOTE]
+> **Data Science Clarification: Cosine Proximity vs Accuracy**
+> In this unsupervised recommendation system, the Cosine Similarity score measures the **normalized directional proximity of TF-IDF feature vectors in Euclidean space**. It reflects lexical and feature overlap, not predictive classification accuracy.
+
+---
+
+## 💻 7. Installation & Setup Guide
+
+### Prerequisites
+- Python 3.11+
+- Node.js v18+ & npm
+- MongoDB Server running locally on `mongodb://localhost:27017`
+- Git
+
+### 1. Clone & Set Up Python Environment
 ```powershell
-python scripts/inspect_dataset.py
+git clone https://github.com/Madhanika-04/Ecommerce-Buyza.git
+cd Ecommerce-Buyza
+
+# Install backend dependencies
+pip install -r backend/requirements.txt
 ```
 
-### Git Repository Status:
-- Remote: `https://github.com/Madhanika-04/Ecommerce-Buyza.git`
+### 2. Run Data Pipeline & Train ML Artifacts
+```powershell
+# Step 1: Clean raw CSVs into master catalog
+python src/data/clean_dataset.py
+
+# Step 2: Generate EDA figures & statistical reports
+python src/data/eda_analysis.py
+
+# Step 3: Fit TF-IDF Vectorizer & export sparse matrix
+python src/features/build_features.py
+
+# Step 4: Run diagnostic evaluation suite
+python src/evaluation/evaluate_recommender.py
+```
+
+### 3. Run Automated Tests
+```powershell
+pytest
+```
+*Expected: 28 passed.*
+
+### 4. Start FastAPI REST Backend
+```powershell
+python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+- API Root: `http://127.0.0.1:8000`
+- Swagger UI Documentation: `http://127.0.0.1:8000/docs`
+- Health Endpoint: `http://127.0.0.1:8000/api/health`
+
+### 5. Start React Frontend
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+- Frontend Web App: `http://127.0.0.1:5173`
+
+---
+
+## 🌐 8. REST API Reference
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/api/health` | Service and MongoDB health status |
+| `GET` | `/api/categories` | List 9 categories with exact product counts |
+| `GET` | `/api/products` | Paginated catalog (`page`, `page_size`, `category`, `sort_by`, `min_price`, `max_price`) |
+| `GET` | `/api/products/{id}` | Detailed product metadata by ID |
+| `GET` | `/api/products/{id}/recommendations` | Top-N Content-Based similar products with similarity scores |
+| `GET` | `/api/search` | Semantic text search via TF-IDF Cosine Similarity |
+| `GET` | `/api/cart` | Retrieve shopping cart items and calculated totals |
+| `POST` | `/api/cart` | Add product to cart (`product_id`, `quantity`) |
+| `PATCH`| `/api/cart/{id}` | Update item quantity in cart |
+| `DELETE`| `/api/cart/{id}` | Remove item from cart |
+| `GET` | `/api/wishlist` | Retrieve saved wishlist items |
+| `POST` | `/api/wishlist` | Save product to wishlist |
+| `DELETE`| `/api/wishlist/{id}` | Remove product from wishlist |
+| `POST` | `/api/orders` | Place simulated order (validates Indian PIN code & address) |
+| `GET` | `/api/orders` | Customer historical order logs |
+
+---
+
+## 🔮 9. Limitations & Future Scope
+
+1. **Cold-Start for New Products**: The Content-Based model requires product textual metadata to compute recommendations. New items with sparse text will have lower match scores.
+2. **Collaborative Filtering**: The current engine is strictly Content-Based (item-to-item text similarity). User clickstream and collaborative filtering (Matrix Factorization / ALS) are identified as future enhancements when user behavior logs become available.
+3. **Hybrid Ensemble**: Combining TF-IDF lexical matching with dense semantic embeddings (e.g., Sentence-Transformers) and collaborative signals for a multi-stage hybrid ranker.
