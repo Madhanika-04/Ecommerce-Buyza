@@ -1,0 +1,197 @@
+{
+  "evaluation_sample_size": 495,
+  "requested_top_n": 5,
+  "total_catalog_size": 76327,
+  "self_recommendation_rate_pct": 0.0,
+  "duplicate_recommendation_rate_pct": 0.0,
+  "score_bounds_validity_pct": 100.0,
+  "intra_category_cohesion_pct": 97.05,
+  "catalog_coverage_pct": 2.958,
+  "unique_products_recommended_count": 2258,
+  "similarity_score_stats": {
+    "mean": 0.6912,
+    "median": 0.6868,
+    "p25": 0.5535,
+    "p75": 0.8319,
+    "min": 0.2831,
+    "max": 1.0
+  },
+  "latency_ms": {
+    "mean": 4.54,
+    "p50": 4.46,
+    "p95": 5.43,
+    "p99": 5.91
+  },
+  "qualitative_cases": [
+    {
+      "query_product": {
+        "product_id": "IN-PROD-020565",
+        "title": "OnePlus Pad 11.61\" LCD Display, 8GB RAM,128GB Storage, MediaTek Dimensity 9000, Android 13.1, 144HZ Refresh Rate, Dolby Vision Atmos, Wi-Fi with Cellular Data Sharing Tablet",
+        "category": "Laptops & Computers",
+        "price_inr": 39757
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "product_id": "IN-PROD-021906",
+          "title": "Longacre DX2 Tablet Scales",
+          "category": "Laptops & Computers",
+          "price_inr": 159941,
+          "similarity_score": 0.35
+        },
+        {
+          "rank": 2,
+          "product_id": "IN-PROD-020749",
+          "title": "Lenovo Tab P11 Plus (1st Gen) - 2021 - Tablet - Long Battery Life - 11\" LCD - MediaTek Octa-Core Processor - 6GB Memory - 128GB Storage - Android 11 - Bluetooth & Wi-Fi - Keyboard & Pen Included",
+          "category": "Laptops & Computers",
+          "price_inr": 34777,
+          "similarity_score": 0.3471
+        },
+        {
+          "rank": 3,
+          "product_id": "IN-PROD-022116",
+          "title": "HP SmartBuy Elite Dragonfly 13.5\" Core i3-1215U 8GB RAM 128GB SSD Chrome",
+          "category": "Laptops & Computers",
+          "price_inr": 54863,
+          "similarity_score": 0.3402
+        }
+      ]
+    },
+    {
+      "query_product": {
+        "product_id": "IN-PROD-039362",
+        "title": "PS PAUL SMITH Men's Bayard Shoe Oxford",
+        "category": "Men's Footwear",
+        "price_inr": 24485
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "product_id": "IN-PROD-043973",
+          "title": "PS Paul Smith Men's Shoe Bayard Black Oxford",
+          "category": "Men's Footwear",
+          "price_inr": 10292,
+          "similarity_score": 0.8502
+        },
+        {
+          "rank": 2,
+          "product_id": "IN-PROD-041490",
+          "title": "PS Paul Smith Men's Ps Bayard Black Shoes",
+          "category": "Men's Footwear",
+          "price_inr": 4067,
+          "similarity_score": 0.8282
+        },
+        {
+          "rank": 3,
+          "product_id": "IN-PROD-052890",
+          "title": "PS Paul Smith Men's Shoe Bayard Navy Oxford",
+          "category": "Men's Footwear",
+          "price_inr": 7138,
+          "similarity_score": 0.828
+        }
+      ]
+    },
+    {
+      "query_product": {
+        "product_id": "IN-PROD-002713",
+        "title": "SAMSUNG EVO Select Micro SD-Memory-Card + Adapter, 256GB microSDXC 130MB/s Full HD & 4K UHD, UHS-I, U3, A2, V30, Expanded Storage for Android Smartphones, Tablets, Nintendo-Switch (MB-ME256KA/AM)",
+        "category": "Cameras & Photography",
+        "price_inr": 1411
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "product_id": "IN-PROD-055479",
+          "title": "SAMSUNG EVO Select Micro SD-Memory-Card + Adapter, 256GB microSDXC 130MB/s Full HD & 4K UHD, UHS-I, U3, A2, V30, Expanded Storage for Android Smartphones, Tablets, Nintendo-Switch (MB-ME256KA/AM)",
+          "category": "Mobiles & Tablets",
+          "price_inr": 1411,
+          "similarity_score": 0.9216
+        },
+        {
+          "rank": 2,
+          "product_id": "IN-PROD-002745",
+          "title": "SAMSUNG PRO Plus + Adapter 512GB microSDXC Up to 160MB/s UHS-I, U3, A2, V30, Full HD & 4K UHD Memory Card for Android Smartphones, Tablets, Go Pro and DJI Drone (MB-MD512KA/AM)",
+          "category": "Cameras & Photography",
+          "price_inr": 4067,
+          "similarity_score": 0.6578
+        },
+        {
+          "rank": 3,
+          "product_id": "IN-PROD-055508",
+          "title": "SAMSUNG PRO Plus + Adapter 512GB microSDXC Up to 160MB/s UHS-I, U3, A2, V30, Full HD & 4K UHD Memory Card for Android Smartphones, Tablets, Go Pro and DJI Drone (MB-MD512KA/AM)",
+          "category": "Mobiles & Tablets",
+          "price_inr": 4067,
+          "similarity_score": 0.5737
+        }
+      ]
+    },
+    {
+      "query_product": {
+        "product_id": "IN-PROD-000001",
+        "title": "Upgraded, Anker Soundcore Bluetooth Speaker with IPX5 Waterproof, Stereo Sound, 24H Playtime, Portable Wireless Speaker for iPhone, Samsung and More",
+        "category": "Audio & Video",
+        "price_inr": 2241
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "product_id": "IN-PROD-055480",
+          "title": "Upgraded, Anker Soundcore Bluetooth Speaker with IPX5 Waterproof, Stereo Sound, 24H Playtime, Portable Wireless Speaker for iPhone, Samsung and More",
+          "category": "Mobiles & Tablets",
+          "price_inr": 2241,
+          "similarity_score": 0.8895
+        },
+        {
+          "rank": 2,
+          "product_id": "IN-PROD-000012",
+          "title": "Soundcore Anker Motion Boom Outdoor Speaker with Titanium Drivers, BassUp Technology, IPX7 Waterproof, 24H Playtime, App, Built-in Handle, Portable Bluetooth Speaker for Outdoors, Camping",
+          "category": "Audio & Video",
+          "price_inr": 8217,
+          "similarity_score": 0.4532
+        },
+        {
+          "rank": 3,
+          "product_id": "IN-PROD-000069",
+          "title": "LENRUE Bluetooth Speaker, Wireless Portable Speaker with Loud Stereo Sound, Rich Bass, 12-Hour Playtime, Built-in Mic. Perfect for iPhone, Samsung and More",
+          "category": "Audio & Video",
+          "price_inr": 1826,
+          "similarity_score": 0.4455
+        }
+      ]
+    },
+    {
+      "query_product": {
+        "product_id": "IN-PROD-055479",
+        "title": "SAMSUNG EVO Select Micro SD-Memory-Card + Adapter, 256GB microSDXC 130MB/s Full HD & 4K UHD, UHS-I, U3, A2, V30, Expanded Storage for Android Smartphones, Tablets, Nintendo-Switch (MB-ME256KA/AM)",
+        "category": "Mobiles & Tablets",
+        "price_inr": 1411
+      },
+      "recommendations": [
+        {
+          "rank": 1,
+          "product_id": "IN-PROD-002713",
+          "title": "SAMSUNG EVO Select Micro SD-Memory-Card + Adapter, 256GB microSDXC 130MB/s Full HD & 4K UHD, UHS-I, U3, A2, V30, Expanded Storage for Android Smartphones, Tablets, Nintendo-Switch (MB-ME256KA/AM)",
+          "category": "Cameras & Photography",
+          "price_inr": 1411,
+          "similarity_score": 0.9216
+        },
+        {
+          "rank": 2,
+          "product_id": "IN-PROD-055508",
+          "title": "SAMSUNG PRO Plus + Adapter 512GB microSDXC Up to 160MB/s UHS-I, U3, A2, V30, Full HD & 4K UHD Memory Card for Android Smartphones, Tablets, Go Pro and DJI Drone (MB-MD512KA/AM)",
+          "category": "Mobiles & Tablets",
+          "price_inr": 4067,
+          "similarity_score": 0.6587
+        },
+        {
+          "rank": 3,
+          "product_id": "IN-PROD-002745",
+          "title": "SAMSUNG PRO Plus + Adapter 512GB microSDXC Up to 160MB/s UHS-I, U3, A2, V30, Full HD & 4K UHD Memory Card for Android Smartphones, Tablets, Go Pro and DJI Drone (MB-MD512KA/AM)",
+          "category": "Cameras & Photography",
+          "price_inr": 4067,
+          "similarity_score": 0.5738
+        }
+      ]
+    }
+  ]
+}
